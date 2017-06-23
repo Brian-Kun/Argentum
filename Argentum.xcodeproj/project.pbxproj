@@ -12,6 +12,8 @@
 		4E9818AB1EFC9F2100D86602 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9818A91EFC9F2100D86602 /* Main.storyboard */; };
 		4E9818AD1EFC9F2100D86602 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9818AC1EFC9F2100D86602 /* Assets.xcassets */; };
 		4E9818B01EFC9F2100D86602 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9818AE1EFC9F2100D86602 /* LaunchScreen.storyboard */; };
+		4E9818B81EFCAA6100D86602 /* Cryptocurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9818B71EFCAA6100D86602 /* Cryptocurrency.swift */; };
+		4E9818BA1EFCC46400D86602 /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9818B91EFCC46400D86602 /* CurrencyTableViewCell.swift */; };
 		688866BB26F500993F5B4B9D /* Pods_Argentum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 307F99FF1215C137F1EFF778 /* Pods_Argentum.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		4E9818AC1EFC9F2100D86602 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E9818AF1EFC9F2100D86602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E9818B11EFC9F2100D86602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E9818B71EFCAA6100D86602 /* Cryptocurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cryptocurrency.swift; sourceTree = "<group>"; };
+		4E9818B91EFCC46400D86602 /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
 		6D715FCAA8A89F959E8FE55E /* Pods-Argentum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Argentum.release.xcconfig"; path = "Pods/Target Support Files/Pods-Argentum/Pods-Argentum.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +71,8 @@
 				4E9818AC1EFC9F2100D86602 /* Assets.xcassets */,
 				4E9818AE1EFC9F2100D86602 /* LaunchScreen.storyboard */,
 				4E9818B11EFC9F2100D86602 /* Info.plist */,
+				4E9818B71EFCAA6100D86602 /* Cryptocurrency.swift */,
+				4E9818B91EFCC46400D86602 /* CurrencyTableViewCell.swift */,
 			);
 			path = Argentum;
 			sourceTree = "<group>";
@@ -123,6 +129,7 @@
 				TargetAttributes = {
 					4E9818A11EFC9F2000D86602 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = PDNZJTLH4Z;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -211,7 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E9818BA1EFCC46400D86602 /* CurrencyTableViewCell.swift in Sources */,
 				4E9818A81EFC9F2000D86602 /* ViewController.swift in Sources */,
+				4E9818B81EFCAA6100D86602 /* Cryptocurrency.swift in Sources */,
 				4E9818A61EFC9F2000D86602 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,9 +345,11 @@
 			baseConfigurationReference = 3AADECF3F9933A7B08072B6C /* Pods-Argentum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PDNZJTLH4Z;
 				INFOPLIST_FILE = Argentum/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Argentum;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brianramirez.Argentum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -349,9 +360,11 @@
 			baseConfigurationReference = 6D715FCAA8A89F959E8FE55E /* Pods-Argentum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PDNZJTLH4Z;
 				INFOPLIST_FILE = Argentum/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Argentum;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brianramirez.Argentum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -376,6 +389,7 @@
 				4E9818B61EFC9F2100D86602 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
