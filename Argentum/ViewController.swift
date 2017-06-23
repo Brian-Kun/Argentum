@@ -89,5 +89,9 @@ class ViewController: UITableViewController {
         task.resume()
     }//End of getApiData
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
 }
 
