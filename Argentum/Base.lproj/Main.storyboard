@@ -29,14 +29,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="93.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zec-Po-yaq">
-                                            <rect key="frame" x="21" y="36" width="51" height="29.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zec-Po-yaq">
+                                            <rect key="frame" x="21" y="36" width="56" height="30"/>
                                             <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="21"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cba-na-SOe">
-                                            <rect key="frame" x="304" y="36" width="51" height="29.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1.90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cba-na-SOe">
+                                            <rect key="frame" x="308.5" y="36" width="46.5" height="30"/>
                                             <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="21"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -61,10 +61,82 @@
                             <outlet property="delegate" destination="FLO-tD-iSt" id="83m-Ko-OuW"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="4qa-5U-IEf" kind="showDetail" identifier="detailView" id="WIN-jo-Nr2"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DCj-Ge-nJc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="116" y="24.7376311844078"/>
+            <point key="canvasLocation" x="226" y="25"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="woP-jt-ltn">
+            <objects>
+                <viewController id="4qa-5U-IEf" customClass="DetailViewController" customModule="Argentum" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MrQ-6O-bZE"/>
+                        <viewControllerLayoutGuide type="bottom" id="qoP-TB-gVf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="be5-ra-4YJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="ldV-gS-lPR">
+                                <rect key="frame" x="31" y="25" width="312" height="34"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="TopLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXe-rY-mkH">
+                                <rect key="frame" x="16" y="31" width="23" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="23" id="b87-ex-zcZ"/>
+                                    <constraint firstAttribute="height" constant="23" id="nd7-r0-8LD"/>
+                                </constraints>
+                                <state key="normal" image="back-btn">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="4qa-5U-IEf" eventType="touchUpInside" id="dz0-no-nqL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUf-iK-Fz1">
+                                <rect key="frame" x="31" y="108" width="312" height="101"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Light" family="Kohinoor Bangla" pointSize="72"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="YUf-iK-Fz1" firstAttribute="top" secondItem="ldV-gS-lPR" secondAttribute="bottom" constant="49" id="6D1-DL-af4"/>
+                            <constraint firstItem="ldV-gS-lPR" firstAttribute="top" secondItem="MrQ-6O-bZE" secondAttribute="bottom" constant="5" id="GHc-U3-TWT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ldV-gS-lPR" secondAttribute="trailing" constant="16" id="HW4-Qd-0KF"/>
+                            <constraint firstItem="ldV-gS-lPR" firstAttribute="leading" secondItem="ZXe-rY-mkH" secondAttribute="trailing" constant="-8" id="I2Q-3l-rqG"/>
+                            <constraint firstItem="YUf-iK-Fz1" firstAttribute="leading" secondItem="be5-ra-4YJ" secondAttribute="leadingMargin" constant="15" id="OFZ-3x-3pP"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ZXe-rY-mkH" secondAttribute="leading" id="QTr-5U-xQ7"/>
+                            <constraint firstItem="ZXe-rY-mkH" firstAttribute="top" secondItem="MrQ-6O-bZE" secondAttribute="bottom" constant="11" id="dSl-xn-JiX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YUf-iK-Fz1" secondAttribute="trailing" constant="16" id="mGK-1o-SOK"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="cnT-kk-U9B" appends="YES" id="TIB-9J-6Y6"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="nameLbl" destination="ldV-gS-lPR" id="6Q9-W1-Uy9"/>
+                        <outlet property="priceLbl" destination="YUf-iK-Fz1" id="4wP-a7-yHV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qcb-7N-HdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="cnT-kk-U9B">
+                    <rectEdge key="edges" left="YES"/>
+                </screenEdgePanGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="968.79999999999995" y="24.7376311844078"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back-btn" width="23" height="23"/>
+    </resources>
 </document>

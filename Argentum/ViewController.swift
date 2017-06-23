@@ -16,6 +16,8 @@ class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        
         getApiData()
         
     }
@@ -29,7 +31,7 @@ class ViewController: UITableViewController {
         cell.nameLbl.text = cryptocurrencyArray[indexPath.row].name
         cell.priceLbl.text = "$\(cryptocurrencyArray[indexPath.row].price)"
         
-        if(indexPath.row % 2 == 0){
+        if(cryptocurrencyArray[indexPath.row].percentChange < 0){
             cell.priceLbl.textColor = UIColor(red:0.91, green:0.30, blue:0.24, alpha:1.0)
         }else{
             cell.priceLbl.textColor = UIColor(red:0.18, green:0.80, blue:0.44, alpha:1.0)
@@ -37,6 +39,19 @@ class ViewController: UITableViewController {
         
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "detailView", sender: indexPath.row)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "detailView"){
+            if let destinationViewController: DetailViewController = segue.destination as? DetailViewController{
+                destinationViewController.selectedCurrency = cryptocurrencyArray[(sender as! Int)]
+                destinationViewController.test = "test"
+            }
+        }
     }
     
     func parseJSON(data:JSON){
@@ -88,10 +103,27 @@ class ViewController: UITableViewController {
         })
         task.resume()
     }//End of getApiData
+    
+    
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
+    //MARK: Loading Screen
+//    func removeLoadingIcon(){
+//        self.activityIndicatorView.removeFromSuperview()
+//        self.activityIndicatorView.stopAnimation()
+//        self.view.backgroundColor = UIColor.black
+//        self.tableView.separatorColor = UIColor.lightGray
+//    }
+//    
+//    func addLoadingIcon(){
+//        self.view.backgroundColor = UIColor(rgba: "#129AA2")
+//        self.tableView.separatorColor = UIColor.clearColor()
+//        self.view.addSubview(activityIndicatorView)
+//        activityIndicatorView.startAnimation()
+//    }
 
 }
 

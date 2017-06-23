@@ -5,5 +5,7 @@ target 'Argentum' do
 
   use_frameworks!
   pod 'SwiftyJSON'
+  pod 'Charts'
+  pod 'NVActivityIndicatorView'
 
 end
