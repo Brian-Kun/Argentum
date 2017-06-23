@@ -25,8 +25,16 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "currencyCell")
-        cell.textLabel?.text = cryptocurrencyArray[indexPath.row].name
+        let cell = tableView.dequeueReusableCell(withIdentifier: "currencyCell") as! CurrencyTableViewCell
+        cell.nameLbl.text = cryptocurrencyArray[indexPath.row].name
+        cell.priceLbl.text = "$\(cryptocurrencyArray[indexPath.row].price)"
+        
+        if(indexPath.row % 2 == 0){
+            cell.priceLbl.textColor = UIColor(red:0.91, green:0.30, blue:0.24, alpha:1.0)
+        }else{
+            cell.priceLbl.textColor = UIColor(red:0.18, green:0.80, blue:0.44, alpha:1.0)
+        }
+        
         
         return cell
     }
@@ -58,7 +66,7 @@ class ViewController: UITableViewController {
         print("Loading....")
         let config = URLSessionConfiguration.default // Session Configuration
         let session = URLSession(configuration: config) // Load configuration into Session
-        let url = URL(string: "https://api.coinmarketcap.com/v1/ticker/")!
+        let url = URL(string: "https://api.coinmarketcap.com/v1/ticker/?limit=20")!
         
         let task = session.dataTask(with: url, completionHandler: {
             (data, response, error) in
