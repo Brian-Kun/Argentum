@@ -8,11 +8,14 @@
 
 import UIKit
 import SwiftyJSON
+import NVActivityIndicatorView
 
 
 class ViewController: UITableViewController {
     
     var cryptocurrencyArray = [Cryptocurrency]()
+    let activityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: UIScreen.main.bounds.width/2, y: UIScreen.main.bounds.height/2, width:0, height:0), type: .ballZigZag, color: UIColor.white)
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,12 +76,12 @@ class ViewController: UITableViewController {
             self.cryptocurrencyArray.append(object)
         }
         self.tableView.reloadData()
-        print("Finished Loading.....")
+        removeLoadingIcon()
     }
 
 
     func getApiData(){
-        print("Loading....")
+        addLoadingIcon()
         let config = URLSessionConfiguration.default // Session Configuration
         let session = URLSession(configuration: config) // Load configuration into Session
         let url = URL(string: "https://api.coinmarketcap.com/v1/ticker/?limit=20")!
@@ -111,19 +114,19 @@ class ViewController: UITableViewController {
     }
     
     //MARK: Loading Screen
-//    func removeLoadingIcon(){
-//        self.activityIndicatorView.removeFromSuperview()
-//        self.activityIndicatorView.stopAnimation()
-//        self.view.backgroundColor = UIColor.black
-//        self.tableView.separatorColor = UIColor.lightGray
-//    }
-//    
-//    func addLoadingIcon(){
-//        self.view.backgroundColor = UIColor(rgba: "#129AA2")
-//        self.tableView.separatorColor = UIColor.clearColor()
-//        self.view.addSubview(activityIndicatorView)
-//        activityIndicatorView.startAnimation()
-//    }
+    func removeLoadingIcon(){
+        self.activityIndicatorView.removeFromSuperview()
+        self.activityIndicatorView.stopAnimating()
+        self.view.backgroundColor = UIColor.black
+        self.tableView.separatorColor = UIColor.lightGray
+    }
+    
+    func addLoadingIcon(){
+        self.view.backgroundColor = UIColor(red:0.15, green:0.68, blue:0.38, alpha:1.0)
+        self.tableView.separatorColor = UIColor.clear
+        self.view.addSubview(activityIndicatorView)
+        activityIndicatorView.startAnimating()
+    }
 
 }
 

@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>NVActivityIndicatorView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Argentum.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,12 +27,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0684743B98AB12C58ABC946B7A4B1363</key>
+		<key>17E3232F5BE482B24B257F486E5F11A2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>177129E4E308B741C219C1B243A98E29</key>
+		<key>3EDFE4052B5DE7D509935AC0774CB135</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EBA92F0B331B465BCB94D0660FEDC089</key>
 		<dict>
 			<key>primary</key>
 			<true/>

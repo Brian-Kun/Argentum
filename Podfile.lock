@@ -2,16 +2,19 @@ PODS:
   - Charts (3.0.2):
     - Charts/Core (= 3.0.2)
   - Charts/Core (3.0.2)
+  - NVActivityIndicatorView (3.6.1)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Charts
+  - NVActivityIndicatorView
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
+  NVActivityIndicatorView: 9f52a7f84bf5c6a798722c450fe3c198e01c56ed
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: f00ad4b6ef4e773ce28537c9ea2b7e1d685848e6
+PODFILE CHECKSUM: d3b570276b83d9cb3ed0bfb63ad71913dfdc5d36
 
 COCOAPODS: 1.2.1
