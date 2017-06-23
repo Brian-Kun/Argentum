@@ -12,9 +12,12 @@
 		4E9818AB1EFC9F2100D86602 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9818A91EFC9F2100D86602 /* Main.storyboard */; };
 		4E9818AD1EFC9F2100D86602 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9818AC1EFC9F2100D86602 /* Assets.xcassets */; };
 		4E9818B01EFC9F2100D86602 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9818AE1EFC9F2100D86602 /* LaunchScreen.storyboard */; };
+		688866BB26F500993F5B4B9D /* Pods_Argentum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 307F99FF1215C137F1EFF778 /* Pods_Argentum.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		307F99FF1215C137F1EFF778 /* Pods_Argentum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Argentum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AADECF3F9933A7B08072B6C /* Pods-Argentum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Argentum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Argentum/Pods-Argentum.debug.xcconfig"; sourceTree = "<group>"; };
 		4E9818A21EFC9F2000D86602 /* Argentum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Argentum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9818A51EFC9F2000D86602 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E9818A71EFC9F2000D86602 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		4E9818AC1EFC9F2100D86602 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E9818AF1EFC9F2100D86602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E9818B11EFC9F2100D86602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D715FCAA8A89F959E8FE55E /* Pods-Argentum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Argentum.release.xcconfig"; path = "Pods/Target Support Files/Pods-Argentum/Pods-Argentum.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				688866BB26F500993F5B4B9D /* Pods_Argentum.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				4E9818A41EFC9F2000D86602 /* Argentum */,
 				4E9818A31EFC9F2000D86602 /* Products */,
+				52606E22FFE22C42766D5CC6 /* Pods */,
+				76491367422E49E4C642FFAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = Argentum;
 			sourceTree = "<group>";
 		};
+		52606E22FFE22C42766D5CC6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AADECF3F9933A7B08072B6C /* Pods-Argentum.debug.xcconfig */,
+				6D715FCAA8A89F959E8FE55E /* Pods-Argentum.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		76491367422E49E4C642FFAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				307F99FF1215C137F1EFF778 /* Pods_Argentum.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E9818B41EFC9F2100D86602 /* Build configuration list for PBXNativeTarget "Argentum" */;
 			buildPhases = (
+				2B0E7010F9C501179468BAAE /* [CP] Check Pods Manifest.lock */,
 				4E98189E1EFC9F2000D86602 /* Sources */,
 				4E98189F1EFC9F2000D86602 /* Frameworks */,
 				4E9818A01EFC9F2000D86602 /* Resources */,
+				16CE7F12139CC5508E971D4F /* [CP] Embed Pods Frameworks */,
+				6FED17F6E2E67C2723E23D57 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16CE7F12139CC5508E971D4F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Argentum/Pods-Argentum-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B0E7010F9C501179468BAAE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6FED17F6E2E67C2723E23D57 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Argentum/Pods-Argentum-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4E98189E1EFC9F2000D86602 /* Sources */ = {
@@ -258,6 +333,7 @@
 		};
 		4E9818B51EFC9F2100D86602 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AADECF3F9933A7B08072B6C /* Pods-Argentum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Argentum/Info.plist;
@@ -270,6 +346,7 @@
 		};
 		4E9818B61EFC9F2100D86602 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D715FCAA8A89F959E8FE55E /* Pods-Argentum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Argentum/Info.plist;
